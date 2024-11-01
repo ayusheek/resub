@@ -12,9 +12,9 @@ import (
 func main() {
 	if len(os.Args) < 3 {
 		fmt.Println("Usage: resub <subdomain> -m <mode> | -w <custom_wordlist>")
-    fmt.Println("Example:")
-    fmt.Println("      resub FUZZ.example.com -m small (tiny, small, medium, large, huge)")
-    fmt.Println("      resub FUZZ.example.com -w custom_wordlist.txt")
+    		fmt.Println("Example:")
+    		fmt.Println("      resub FUZZ.example.com -m small (tiny, small, medium, large, huge)")
+    		fmt.Println("      resub FUZZ.example.com -w custom_wordlist.txt")
 		return
 	}
 
