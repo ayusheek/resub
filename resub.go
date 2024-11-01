@@ -10,10 +10,10 @@ import (
 )
 
 func show_help() {
-	fmt.Println("Usage: resub <subdomain> -m <mode> | -w <custom_wordlist>")
+	fmt.Println("\nUsage: resub <subdomain> -m <mode> | -w <custom_wordlist>\n")
 	fmt.Println("Example:")
 	fmt.Println("      resub FUZZ.example.com -m small (tiny, small, medium, large, huge)")
-	fmt.Println("      resub FUZZ.example.com -w custom_wordlist.txt")
+	fmt.Println("      resub FUZZ.example.com -w custom_wordlist.txt\n")
 	return
 }
 
