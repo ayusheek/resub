@@ -9,12 +9,17 @@ import (
 	"strings"
 )
 
+func show_help() {
+	fmt.Println("Usage: resub <subdomain> -m <mode> | -w <custom_wordlist>")
+	fmt.Println("Example:")
+	fmt.Println("      resub FUZZ.example.com -m small (tiny, small, medium, large, huge)")
+	fmt.Println("      resub FUZZ.example.com -w custom_wordlist.txt")
+	return
+}
+
 func main() {
 	if len(os.Args) < 3 {
-		fmt.Println("Usage: resub <subdomain> -m <mode> | -w <custom_wordlist>")
-    		fmt.Println("Example:")
-    		fmt.Println("      resub FUZZ.example.com -m small (tiny, small, medium, large, huge)")
-    		fmt.Println("      resub FUZZ.example.com -w custom_wordlist.txt")
+		show_help()
 		return
 	}
 
@@ -27,7 +32,7 @@ func main() {
 	} else if os.Args[2] == "-w" && len(os.Args) == 4 {
 		customWordlist = os.Args[3]
 	} else {
-		fmt.Println("Usage: go run resub.go <subdomain> -m <mode> | -w <custom_wordlist>")
+		show_help()
 		return
 	}
 
@@ -51,7 +56,7 @@ func main() {
 
 	// Clone the repository if not already present
 	if _, err := os.Stat(wordlistPath); os.IsNotExist(err) && customWordlist == "" {
-		fmt.Println("Cloning n0kovo_subdomains repository...")
+		fmt.Println("n0kovo_subdomains is not installed. Installing now...")
 		cmd := exec.Command("git", "clone", "https://github.com/n0kovo/n0kovo_subdomains", resubDir)
 		if err := cmd.Run(); err != nil {
 			fmt.Println("Error cloning repository:", err)
