@@ -46,7 +46,6 @@ func main() {
 
 	resubDir := filepath.Join(os.Getenv("HOME"), ".config", "resub", "n0kovo_subdomains")
 	if _, err := os.Stat(resubDir); os.IsNotExist(err) {
-		fmt.Println("Creating directory:", resubDir)
 		err := os.MkdirAll(resubDir, os.ModePerm)
 		if err != nil {
 			fmt.Println("Error creating directory:", err)
