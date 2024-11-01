@@ -30,3 +30,12 @@ wordlist path automatically used with the above command:
 ```
 $HOME/.config/resub/n0kovo/n0kovo_subdomains/n0kovo_subdomains_huge.txt
 ```
+
+workflow:
+
+```
+resub FUZZ-uat.example.com -m large | dnsx -t 200
+```
+
+- see https://github.com/projectdiscovery/dnsx
+
