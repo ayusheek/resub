@@ -1,6 +1,16 @@
 # resub
 Tool to create subdomain permutations for active enumeration
 
+## Installation:
+
+Using go:
+
+```
+go install github.com/ayusheek/resub@latest
+```
+
+or [download a release for your platform](https://github.com/ayusheek/resub/releases/).
+
 ## Usage:
 
 Using cutom wordlist:
