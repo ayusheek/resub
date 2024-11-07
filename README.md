@@ -32,7 +32,7 @@ hello-world.example.com
 using [n0kovo_subdomains](https://github.com/n0kovo/n0kovo_subdomains) wordlist:
 
 ```
-resub FUZZ.example.com -m huge
+resub FUZZ.example.com -m huge  # (tiny, small, medium, large, huge)
 ```
 
 wordlist path automatically used with the above command:
