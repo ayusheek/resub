@@ -6,7 +6,7 @@ Tool to create subdomain permutations for active enumeration
 Using go:
 
 ```
-go install github.com/ayusheek/resub@latest
+go install github.com/ayushkr12/resub@latest
 ```
 
 or [download a release for your platform](https://github.com/ayusheek/resub/releases/).
